@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notify.js</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="src/notify.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="container">
+			<h1>Notify</h1>
+			<section class="section d-flex flex-center space-around">
+				<div class="d-flex flex-column">
+					<h2>Navigation</h2>
+					<nav class="main-nav">
+						<ul class="nav">
+							<li><a href="#dark-theme">Dark theme</a></li>
+							<li><a href="#light-theme">Light theme</a></li>
+							<li><a href="#colored-theme">Colored theme</a></li>
+							<li><a href="#colored-title">Colored title</a></li>
+							<li><a href="#short-message">Short notifications</a></li>
+							<li><a href="#bottom-timeline">Timeline bottom</a></li>
+							<li><a href="#off-timeline">Timeline off</a></li>
+						</ul>
+					</nav>
+				</div>
+				<a href="https://ori4510.github.io/notify/" class="btn btn-black doc-btn" target="_blank">Read Documentation</a>
+			</section>
+			<section class="section s1" id="dark-theme">
+				<h2>Dark theme</h2>
+				<div class="d-flex flex-center demo-btns-wrap">
+					<button id="b1-1" class="btn show">Base</button>
+					<button id="b1-2" class="btn showInfo">Info</button>
+					<button id="b1-3" class="btn showSuccess">Success</button>
+					<button id="b1-4" class="btn showWarning">Warning</button>
+					<button id="b1-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b1-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+}).show();</code></pre>
+
+<pre data-target="b1-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+}).showInfo();</code></pre>
+
+<pre data-target="b1-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+}).showSuccess();</code></pre>
+
+<pre data-target="b1-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+}).showWarning();</code></pre>
+
+<pre data-target="b1-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+}).showDanger();</code></pre>
+				</div>
+				
+			</section>
+
+			<section class="section s2" id="light-theme">
+				<h2>Light theme</h2>
+				<div class="d-flex flex-center">
+					<button id="b2-1" class="btn show">Base</button>
+					<button id="b2-2" class="btn showInfo">Info</button>
+					<button id="b2-3" class="btn showSuccess">Success</button>
+					<button id="b2-4" class="btn showWarning">Warning</button>
+					<button id="b2-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b2-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+	lightTheme: true,
+}).show();</code></pre>
+<pre data-target="b2-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+	lightTheme: true,
+}).showInfo();</code></pre>
+<pre data-target="b2-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+	lightTheme: true,
+}).showSuccess();</code></pre>
+<pre data-target="b2-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+	lightTheme: true,
+}).showWarning();</code></pre>
+<pre data-target="b2-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+	lightTheme: true,
+}).showDanger();</code></pre>
+				</div>
+			</section>
+
+			<section class="section s3" id="colored-theme">
+				<h2>Colored theme</h2>
+				<div class="d-flex flex-center">
+					<button id="b3-1" class="btn show">Base</button>
+					<button id="b3-2" class="btn showInfo">Info</button>
+					<button id="b3-3" class="btn showSuccess">Success</button>
+					<button id="b3-4" class="btn showWarning">Warning</button>
+					<button id="b3-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b3-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+	coloredBackground: 'all',
+}).show();</code></pre>
+<pre data-target="b3-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+	coloredBackground: 'all',
+}).showInfo();</code></pre>
+<pre data-target="b3-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+	coloredBackground: 'all',
+}).showSuccess();</code></pre>
+<pre data-target="b3-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+	coloredBackground: 'all',
+}).showWarning();</code></pre>
+<pre data-target="b3-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+	coloredBackground: 'all',
+}).showDanger();</code></pre>
+				</div>
+			</section>
+
+			<section class="section s4" id="colored-title">
+				<h2>Colored title</h2>
+				<div class="d-flex flex-center">
+					<button id="b4-1" class="btn show">Base</button>
+					<button id="b4-2" class="btn showInfo">Info</button>
+					<button id="b4-3" class="btn showSuccess">Success</button>
+					<button id="b4-4" class="btn showWarning">Warning</button>
+					<button id="b4-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b4-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+	coloredBackground: 'title',
+}).show();</code></pre>
+<pre data-target="b4-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+	coloredBackground: 'title',
+}).showInfo();</code></pre>
+<pre data-target="b4-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+	coloredBackground: 'title',
+}).showSuccess();</code></pre>
+<pre data-target="b4-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+	coloredBackground: 'title',
+}).showWarning();</code></pre>
+<pre data-target="b4-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+	coloredBackground: 'title',
+}).showDanger();</code></pre>
+				</div>
+			</section>
+
+			<section class="section s5" id="short-message">
+				<h2>Short notifications</h2>
+				<div class="d-flex flex-center">
+					<button id="b5-1" class="btn show">Base</button>
+					<button id="b5-2" class="btn showInfo">Info</button>
+					<button id="b5-3" class="btn showSuccess">Success</button>
+					<button id="b5-4" class="btn showWarning">Warning</button>
+					<button id="b5-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b5-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+	shortMode: true,
+}).show();</code></pre>
+<pre data-target="b5-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+	shortMode: true,
+}).showInfo();</code></pre>
+<pre data-target="b5-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+	shortMode: true,
+}).showSuccess();</code></pre>
+<pre data-target="b5-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+	shortMode: true,
+}).showWarning();</code></pre>
+<pre data-target="b5-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+	shortMode: true,
+}).showDanger();</code></pre>
+				</div>
+			</section>
+
+			<section class="section s6" id="bottom-timeline">
+				<h2>Timeline bottom</h2>
+				<div class="d-flex flex-center">
+					<button id="b6-1" class="btn show">Base</button>
+					<button id="b6-2" class="btn showInfo">Info</button>
+					<button id="b6-3" class="btn showSuccess">Success</button>
+					<button id="b6-4" class="btn showWarning">Warning</button>
+					<button id="b6-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b6-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+	bottomTimeline: true,
+}).show();</code></pre>
+<pre data-target="b6-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+	bottomTimeline: true,
+}).showInfo();</code></pre>
+<pre data-target="b6-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+	bottomTimeline: true,
+}).showSuccess();</code></pre>
+<pre data-target="b6-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+	bottomTimeline: true,
+}).showWarning();</code></pre>
+<pre data-target="b6-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+	bottomTimeline: true,
+}).showDanger();</code></pre>
+				</div>
+			</section>
+
+			<section class="section s7" id="off-timeline">
+				<h2>Timeline off</h2>
+				<div class="d-flex flex-center">
+					<button id="b7-1" class="btn show">Base</button>
+					<button id="b7-2" class="btn showInfo">Info</button>
+					<button id="b7-3" class="btn showSuccess">Success</button>
+					<button id="b7-4" class="btn showWarning">Warning</button>
+					<button id="b7-5" class="btn showDanger">Danger</button>
+				</div>
+
+				<div class="d-flex flex-content-center flex-wrap demo-code-wrap">
+<pre data-target="b7-1"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'Show',
+	content: 'Hello, content!',
+	duration: 10,
+	hideTimeline: true,
+}).show();</code></pre>
+<pre data-target="b7-2"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showInfo',
+	content: 'Hello, content!',
+	icon: 'info',
+	duration: 10,
+	hideTimeline: true,
+}).showInfo();</code></pre>
+<pre data-target="b7-3"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showSuccess',
+	content: 'Hello, content!',
+	icon: 'ok',
+	duration: 10,
+	hideTimeline: true,
+}).showSuccess();</code></pre>
+<pre data-target="b7-4"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showWarning',
+	content: 'Hello, content!',
+	icon: 'message',
+	duration: 10,
+	hideTimeline: true,
+}).showWarning();</code></pre>
+<pre data-target="b7-5"><span class="dom-copy-btn">copy</span><code>Notify({
+	title: 'showDanger',
+	content: 'Hello, content!',
+	icon: 'no',
+	duration: 10,
+	hideTimeline: true,
+}).showDanger();</code></pre>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script src="src/notify.min.js"></script>
+	<script src="js/demo.js"></script>
+</body>
+</html>

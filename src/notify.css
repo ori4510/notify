@@ -1,0 +1,316 @@
+:root {
+	--theme-light: #e8e8e9;
+	--theme-light-text: #191919;
+	--theme-dark: #191919;
+	--theme-dark-text: #d8d8d9;
+	--color-info: #0ca0ed;
+	--color-info-secondary: #0a8acc;
+	--color-danger: #e33c4a;
+	--color-danger-secondary: #b6303b;
+	--color-warning: #d9a40a;
+	--color-warning-secondary: #ae8308;
+	--color-success: #2ca76b;
+	--color-success-secondary: #238656;
+}
+
+.dom-notify-container {
+	position: fixed;
+	right: 0;
+	top: 0;
+	margin-right: 10px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column-reverse;
+	z-index: 9999999999;
+}
+.dom-notify {
+	width: 300px;
+	border-radius: 7px;
+	font-size: 16px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .45), 0 0 10px rgba(255, 255, 255, .35);
+	overflow: hidden;
+	transition: opacity 0.4s ease;
+	line-height: 1.2;
+	position: relative;
+	opacity: 0;
+}
+.dom-notify + .dom-notify {
+	margin-bottom: 15px;
+}
+.dom-notify.show-notify {
+	opacity: 1;
+	transition: .15s;
+}
+.dom-notify header {
+	display: flex;
+	padding: 12px 12px 10px;
+	background-color: var(--theme-dark);
+	color: var(--theme-dark-text);
+}
+.dom-notify .dom-notify-content {
+	padding: 10px;
+	background-color: var(--theme-dark);
+	color: var(--theme-dark-text);
+}
+.dom-notify header .dom-notify-icon {
+	padding-right: 10px;
+	margin-top: 1px;
+}
+.dom-notify header .dom-notify-icon svg {
+	height: 20px;
+	fill: var(--theme-dark-text);
+	display: block;
+}
+.dom-notify header .dom-notify-title {
+	padding: 0 10px 0 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 110%;
+	word-break: break-word;
+}
+.dom-notify header .dom-notify-exit {
+	width: 24px;
+	height: 24px;
+	margin-top: -5px;
+	margin-right: -5px;
+	cursor: pointer;
+	margin-left: auto;
+}
+.dom-notify header .dom-notify-exit svg {
+	stroke: #999;
+}
+.dom-notify .dom-notify-timeline-bar {
+	position: relative;
+	height: 1px;
+	background-color: #656565;
+}
+.dom-notify .dom-notify-timeline-bar-progress {
+	position: absolute;
+	height: 3px;
+	top: -1px;
+	left: 0;
+	background-color: #656565;
+	animation: timeLine 5000 linear;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes timeLine {
+	0% {
+		width: 100%;
+	}
+	100% {
+		width: 0%;
+	}
+}
+
+/* light theme */
+.dom-notify.dom-notify-light-theme header {
+	background-color: var(--theme-light);
+	color: var(--theme-light-text);
+}
+.dom-notify.dom-notify-light-theme .dom-notify-content {
+	background-color: var(--theme-light);
+	color: var(--theme-light-text);
+}
+.dom-notify.dom-notify-light-theme header .dom-notify-icon svg {
+	fill: var(--theme-light-text);
+}
+
+/* info */
+.dom-notify.dom-notify-info header {
+	color: var(--color-info);
+}
+.dom-notify.dom-notify-info header .dom-notify-icon svg {
+	fill: var(--color-info);
+}
+.dom-notify.dom-notify-info .dom-notify-timeline-bar {
+	background-color: var(--color-info);
+}
+.dom-notify.dom-notify-info .dom-notify-timeline-bar-progress {
+	background-color: var(--color-info);
+}
+
+/* danger */
+.dom-notify.dom-notify-danger header {
+	color: var(--color-danger);
+}
+.dom-notify.dom-notify-danger header .dom-notify-icon svg {
+	fill: var(--color-danger);
+}
+.dom-notify.dom-notify-danger .dom-notify-timeline-bar {
+	background-color: var(--color-danger);
+}
+.dom-notify.dom-notify-danger .dom-notify-timeline-bar-progress {
+	background-color: var(--color-danger);
+}
+
+/* warning */
+.dom-notify.dom-notify-warning header {
+	color: var(--color-warning);
+}
+.dom-notify.dom-notify-warning header .dom-notify-icon svg {
+	fill: var(--color-warning);
+}
+.dom-notify.dom-notify-warning .dom-notify-timeline-bar {
+	background-color: var(--color-warning);
+}
+.dom-notify.dom-notify-warning .dom-notify-timeline-bar-progress {
+	background-color: var(--color-warning);
+}
+
+/* success */
+.dom-notify.dom-notify-success header {
+	color: var(--color-success);
+}
+.dom-notify.dom-notify-success header .dom-notify-icon svg {
+	fill: var(--color-success);
+}
+.dom-notify.dom-notify-success .dom-notify-timeline-bar {
+	background-color: var(--color-success);
+}
+.dom-notify.dom-notify-success .dom-notify-timeline-bar-progress {
+	background-color: var(--color-success);
+}
+
+/* colored title */
+.dom-notify.dom-notify-colored-title header {
+	color: var(--theme-light-text);
+	background-color: var(--theme-dark);
+}
+.dom-notify.dom-notify-colored-title header .dom-notify-icon svg {
+	fill: var(--theme-light-text);
+}
+.dom-notify.dom-notify-colored-title header .dom-notify-exit svg {
+	stroke: #353535;
+}
+.dom-notify.dom-notify-colored-title.dom-notify-default header {
+	color: var(--theme-dark-text);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-icon svg {
+	fill: var(--theme-dark-text);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-exit svg {
+	stroke: #999;
+}
+.dom-notify.dom-notify-colored-title .dom-notify-timeline-bar-progress {
+	top: 1px;
+}
+.dom-notify.dom-notify-colored-title.dom-notify-info header {
+	background-color: var(--color-info);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-info .dom-notify-timeline-bar-progress {
+	background-color: var(--color-info-secondary);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-danger header {
+	background-color: var(--color-danger);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-danger .dom-notify-timeline-bar-progress {
+	background-color: var(--color-danger-secondary);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-warning header {
+	background-color: var(--color-warning);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-warning .dom-notify-timeline-bar-progress {
+	background-color: var(--color-warning-secondary);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-success header {
+	background-color: var(--color-success);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-success .dom-notify-timeline-bar-progress {
+	background-color: var(--color-success-secondary);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header {
+	color: var(--theme-light-text);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header .dom-notify-icon svg {
+	fill: var(--theme-light-text);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header .dom-notify-exit svg {
+	stroke: #353535;
+}
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header,
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-timeline-bar {
+	background-color: #bbb;
+}
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-timeline-bar-progress {
+	background-color: #9f9f9f;
+}
+
+/* colored bg */
+.dom-notify.dom-notify-colored-content .dom-notify-content {
+	color: var(--theme-light-text);
+}
+.dom-notify.dom-notify-colored-content .dom-notify-timeline-bar-progress {
+	height: 3px;
+	top: -1px;
+}
+.dom-notify.dom-notify-colored-content.dom-notify-info .dom-notify-content {
+	background-color: var(--color-info);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-danger .dom-notify-content {
+	background-color: var(--color-danger);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-warning .dom-notify-content {
+	background-color: var(--color-warning);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-success .dom-notify-content {
+	background-color: var(--color-success);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-info .dom-notify-timeline-bar {
+	background-color: var(--color-info-secondary);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-danger .dom-notify-timeline-bar {
+	background-color: var(--color-danger-secondary);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-warning .dom-notify-timeline-bar {
+	background-color: var(--color-warning-secondary);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-success .dom-notify-timeline-bar {
+	background-color: var(--color-success-secondary);
+}
+.dom-notify.dom-notify-default.dom-notify-colored-content .dom-notify-content {
+	color: var(--theme-dark-text);
+}
+.dom-notify.dom-notify-colored-content.dom-notify-light-theme.dom-notify-default header,
+.dom-notify.dom-notify-colored-content.dom-notify-light-theme.dom-notify-default .dom-notify-content {
+	background-color: var(--theme-light);
+	color: var(--theme-light-text);
+}
+
+/* bottom timeline */
+.dom-notify.dom-notify-bottom-timeline .dom-notify-content {
+	padding-bottom: 14px;
+}
+.dom-notify.dom-notify-bottom-timeline .dom-notify-timeline-bar {
+	position: static;
+}
+.dom-notify.dom-notify-bottom-timeline .dom-notify-timeline-bar-progress {
+	height: 3px;
+	bottom: 0;
+	top: auto;
+}
+
+/* short notify */
+.dom-notify.dom-notify-short.dom-notify-bottom-timeline .dom-notify-timeline-bar {
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.dom-notify.dom-notify-short.dom-notify-bottom-timeline .dom-notify-timeline-bar-progress {
+	height: 3px;
+	position: static;
+}
+.dom-notify.dom-notify-short.dom-notify-light-theme {
+	background-color: var(--theme-light);
+}
+.dom-notify.dom-notify-bottom-timeline.dom-notify-short header {
+	padding-bottom: 13px;
+}
+.dom-notify.dom-notify-short.dom-notify-default .dom-notify-timeline-bar,
+.dom-notify.dom-notify-short.dom-notify-info .dom-notify-timeline-bar,
+.dom-notify.dom-notify-short.dom-notify-danger .dom-notify-timeline-bar,
+.dom-notify.dom-notify-short.dom-notify-warning .dom-notify-timeline-bar,
+.dom-notify.dom-notify-short.dom-notify-success .dom-notify-timeline-bar {
+	background-color: transparent;
+}
