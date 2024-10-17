@@ -5,7 +5,7 @@ document.querySelector('#b1-1').onclick = () => {
 	Notify({
 		title: 'Show',
 		content: 'Hello, content!',
-		duration: 20,
+		duration: 10,
 	}).show();
 }
 document.querySelector('#b1-2').onclick = () => {
@@ -13,7 +13,7 @@ document.querySelector('#b1-2').onclick = () => {
 		title: 'showInfo',
 		content: 'Hello, content!',
 		icon: 'info',
-		duration: 20,
+		duration: 10,
 	}).showInfo();
 }
 document.querySelector('#b1-3').onclick = () => {
@@ -21,7 +21,7 @@ document.querySelector('#b1-3').onclick = () => {
 		title: 'showSuccess',
 		content: 'Hello, content!',
 		icon: 'ok',
-		duration: 20,
+		duration: 10,
 	}).showSuccess();
 }
 document.querySelector('#b1-4').onclick = () => {
@@ -29,7 +29,7 @@ document.querySelector('#b1-4').onclick = () => {
 		title: 'showWarning',
 		content: 'Hello, content!',
 		icon: 'message',
-		duration: 20,
+		duration: 10,
 	}).showWarning();
 }
 document.querySelector('#b1-5').onclick = () => {
@@ -37,7 +37,7 @@ document.querySelector('#b1-5').onclick = () => {
 		title: 'showDanger',
 		content: 'Hello, content!',
 		icon: 'no',
-		duration: 20,
+		duration: 10,
 	}).showDanger();
 }
 
