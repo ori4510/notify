@@ -75,9 +75,17 @@
 	margin-right: -5px;
 	cursor: pointer;
 	margin-left: auto;
+	transition: .15s;
+	border-radius: 5px;
+	padding: 1px;
+}
+.dom-notify header .dom-notify-exit:hover {
+	background-color: rgba(255, 255, 255, .15);
 }
 .dom-notify header .dom-notify-exit svg {
 	stroke: #999;
+	display: block;
+	pointer-events: none;
 }
 .dom-notify .dom-notify-timeline-bar {
 	position: relative;
@@ -111,6 +119,9 @@
 .dom-notify.dom-notify-light-theme .dom-notify-content {
 	background-color: var(--theme-light);
 	color: var(--theme-light-text);
+}
+.dom-notify.dom-notify-light-theme header .dom-notify-exit:hover {
+	background-color: rgba(0, 0, 0, .1);
 }
 .dom-notify.dom-notify-light-theme header .dom-notify-icon svg {
 	fill: var(--theme-light-text);
@@ -180,6 +191,9 @@
 .dom-notify.dom-notify-colored-title header .dom-notify-icon svg {
 	fill: var(--theme-light-text);
 }
+.dom-notify.dom-notify-colored-title header .dom-notify-exit:hover {
+	background-color: rgba(0, 0, 0, .15);
+}
 .dom-notify.dom-notify-colored-title header .dom-notify-exit svg {
 	stroke: #353535;
 }
@@ -188,6 +202,9 @@
 }
 .dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-icon svg {
 	fill: var(--theme-dark-text);
+}
+.dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-exit:hover {
+	background-color: rgba(255, 255, 255, .15);
 }
 .dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-exit svg {
 	stroke: #999;
