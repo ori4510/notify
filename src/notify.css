@@ -67,6 +67,7 @@
 	font-weight: bold;
 	font-size: 110%;
 	word-break: break-word;
+	line-height: 1.2;
 }
 .dom-notify header .dom-notify-exit {
 	width: 24px;
