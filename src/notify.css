@@ -41,7 +41,7 @@
 	opacity: 1;
 	transition: .15s;
 }
-.dom-notify header {
+.dom-notify .dom-notify-header {
 	display: flex;
 	padding: 12px 12px 10px;
 	background-color: var(--theme-dark);
@@ -52,16 +52,16 @@
 	background-color: var(--theme-dark);
 	color: var(--theme-dark-text);
 }
-.dom-notify header .dom-notify-icon {
+.dom-notify .dom-notify-header .dom-notify-icon {
 	padding-right: 10px;
 	margin-top: 1px;
 }
-.dom-notify header .dom-notify-icon svg {
+.dom-notify .dom-notify-header .dom-notify-icon svg {
 	height: 20px;
 	fill: var(--theme-dark-text);
 	display: block;
 }
-.dom-notify header .dom-notify-title {
+.dom-notify .dom-notify-header .dom-notify-title {
 	padding: 0 10px 0 0;
 	margin: 0;
 	font-weight: bold;
@@ -69,7 +69,7 @@
 	word-break: break-word;
 	line-height: 1.2;
 }
-.dom-notify header .dom-notify-exit {
+.dom-notify .dom-notify-header .dom-notify-exit {
 	width: 24px;
 	height: 24px;
 	margin-top: -5px;
@@ -80,10 +80,10 @@
 	border-radius: 5px;
 	padding: 1px;
 }
-.dom-notify header .dom-notify-exit:hover {
+.dom-notify .dom-notify-header .dom-notify-exit:hover {
 	background-color: rgba(255, 255, 255, .15);
 }
-.dom-notify header .dom-notify-exit svg {
+.dom-notify .dom-notify-header .dom-notify-exit svg {
 	stroke: #999;
 	display: block;
 	pointer-events: none;
@@ -113,7 +113,7 @@
 }
 
 /* light theme */
-.dom-notify.dom-notify-light-theme header {
+.dom-notify.dom-notify-light-theme .dom-notify-header {
 	background-color: var(--theme-light);
 	color: var(--theme-light-text);
 }
@@ -121,18 +121,18 @@
 	background-color: var(--theme-light);
 	color: var(--theme-light-text);
 }
-.dom-notify.dom-notify-light-theme header .dom-notify-exit:hover {
+.dom-notify.dom-notify-light-theme .dom-notify-header .dom-notify-exit:hover {
 	background-color: rgba(0, 0, 0, .1);
 }
-.dom-notify.dom-notify-light-theme header .dom-notify-icon svg {
+.dom-notify.dom-notify-light-theme .dom-notify-header .dom-notify-icon svg {
 	fill: var(--theme-light-text);
 }
 
 /* info */
-.dom-notify.dom-notify-info header {
+.dom-notify.dom-notify-info .dom-notify-header {
 	color: var(--color-info);
 }
-.dom-notify.dom-notify-info header .dom-notify-icon svg {
+.dom-notify.dom-notify-info .dom-notify-header .dom-notify-icon svg {
 	fill: var(--color-info);
 }
 .dom-notify.dom-notify-info .dom-notify-timeline-bar {
@@ -143,10 +143,10 @@
 }
 
 /* danger */
-.dom-notify.dom-notify-danger header {
+.dom-notify.dom-notify-danger .dom-notify-header {
 	color: var(--color-danger);
 }
-.dom-notify.dom-notify-danger header .dom-notify-icon svg {
+.dom-notify.dom-notify-danger .dom-notify-header .dom-notify-icon svg {
 	fill: var(--color-danger);
 }
 .dom-notify.dom-notify-danger .dom-notify-timeline-bar {
@@ -157,10 +157,10 @@
 }
 
 /* warning */
-.dom-notify.dom-notify-warning header {
+.dom-notify.dom-notify-warning .dom-notify-header {
 	color: var(--color-warning);
 }
-.dom-notify.dom-notify-warning header .dom-notify-icon svg {
+.dom-notify.dom-notify-warning .dom-notify-header .dom-notify-icon svg {
 	fill: var(--color-warning);
 }
 .dom-notify.dom-notify-warning .dom-notify-timeline-bar {
@@ -171,10 +171,10 @@
 }
 
 /* success */
-.dom-notify.dom-notify-success header {
+.dom-notify.dom-notify-success .dom-notify-header {
 	color: var(--color-success);
 }
-.dom-notify.dom-notify-success header .dom-notify-icon svg {
+.dom-notify.dom-notify-success .dom-notify-header .dom-notify-icon svg {
 	fill: var(--color-success);
 }
 .dom-notify.dom-notify-success .dom-notify-timeline-bar {
@@ -185,68 +185,68 @@
 }
 
 /* colored title */
-.dom-notify.dom-notify-colored-title header {
+.dom-notify.dom-notify-colored-title .dom-notify-header {
 	color: var(--theme-light-text);
 	background-color: var(--theme-dark);
 }
-.dom-notify.dom-notify-colored-title header .dom-notify-icon svg {
+.dom-notify.dom-notify-colored-title .dom-notify-header .dom-notify-icon svg {
 	fill: var(--theme-light-text);
 }
-.dom-notify.dom-notify-colored-title header .dom-notify-exit:hover {
+.dom-notify.dom-notify-colored-title .dom-notify-header .dom-notify-exit:hover {
 	background-color: rgba(0, 0, 0, .15);
 }
-.dom-notify.dom-notify-colored-title header .dom-notify-exit svg {
+.dom-notify.dom-notify-colored-title .dom-notify-header .dom-notify-exit svg {
 	stroke: #353535;
 }
-.dom-notify.dom-notify-colored-title.dom-notify-default header {
+.dom-notify.dom-notify-colored-title.dom-notify-default .dom-notify-header {
 	color: var(--theme-dark-text);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-icon svg {
+.dom-notify.dom-notify-colored-title.dom-notify-default .dom-notify-header .dom-notify-icon svg {
 	fill: var(--theme-dark-text);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-exit:hover {
+.dom-notify.dom-notify-colored-title.dom-notify-default .dom-notify-header .dom-notify-exit:hover {
 	background-color: rgba(255, 255, 255, .15);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-default header .dom-notify-exit svg {
+.dom-notify.dom-notify-colored-title.dom-notify-default .dom-notify-header .dom-notify-exit svg {
 	stroke: #999;
 }
 .dom-notify.dom-notify-colored-title .dom-notify-timeline-bar-progress {
 	top: 1px;
 }
-.dom-notify.dom-notify-colored-title.dom-notify-info header {
+.dom-notify.dom-notify-colored-title.dom-notify-info .dom-notify-header {
 	background-color: var(--color-info);
 }
 .dom-notify.dom-notify-colored-title.dom-notify-info .dom-notify-timeline-bar-progress {
 	background-color: var(--color-info-secondary);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-danger header {
+.dom-notify.dom-notify-colored-title.dom-notify-danger .dom-notify-header {
 	background-color: var(--color-danger);
 }
 .dom-notify.dom-notify-colored-title.dom-notify-danger .dom-notify-timeline-bar-progress {
 	background-color: var(--color-danger-secondary);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-warning header {
+.dom-notify.dom-notify-colored-title.dom-notify-warning .dom-notify-header {
 	background-color: var(--color-warning);
 }
 .dom-notify.dom-notify-colored-title.dom-notify-warning .dom-notify-timeline-bar-progress {
 	background-color: var(--color-warning-secondary);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-success header {
+.dom-notify.dom-notify-colored-title.dom-notify-success .dom-notify-header {
 	background-color: var(--color-success);
 }
 .dom-notify.dom-notify-colored-title.dom-notify-success .dom-notify-timeline-bar-progress {
 	background-color: var(--color-success-secondary);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header {
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-header {
 	color: var(--theme-light-text);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header .dom-notify-icon svg {
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-header .dom-notify-icon svg {
 	fill: var(--theme-light-text);
 }
-.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header .dom-notify-exit svg {
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-header .dom-notify-exit svg {
 	stroke: #353535;
 }
-.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default header,
+.dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-header,
 .dom-notify.dom-notify-colored-title.dom-notify-light-theme.dom-notify-default .dom-notify-timeline-bar {
 	background-color: #bbb;
 }
@@ -289,7 +289,7 @@
 .dom-notify.dom-notify-default.dom-notify-colored-content .dom-notify-content {
 	color: var(--theme-dark-text);
 }
-.dom-notify.dom-notify-colored-content.dom-notify-light-theme.dom-notify-default header,
+.dom-notify.dom-notify-colored-content.dom-notify-light-theme.dom-notify-default .dom-notify-header,
 .dom-notify.dom-notify-colored-content.dom-notify-light-theme.dom-notify-default .dom-notify-content {
 	background-color: var(--theme-light);
 	color: var(--theme-light-text);
@@ -322,7 +322,7 @@
 .dom-notify.dom-notify-short.dom-notify-light-theme {
 	background-color: var(--theme-light);
 }
-.dom-notify.dom-notify-bottom-timeline.dom-notify-short header {
+.dom-notify.dom-notify-bottom-timeline.dom-notify-short .dom-notify-header {
 	padding-bottom: 13px;
 }
 .dom-notify.dom-notify-short.dom-notify-default .dom-notify-timeline-bar,

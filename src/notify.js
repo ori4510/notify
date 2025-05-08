@@ -79,7 +79,8 @@ class NotifyPlugin {
 				break;
 		}
 
-		const headerElem = document.createElement('header');
+		const headerElem = document.createElement('div');
+		headerElem.classList.add('dom-notify-header');
 
 		if (this.icon && this.constructor.iconList[this.icon]) {
 			const iconElem = document.createElement('div');
